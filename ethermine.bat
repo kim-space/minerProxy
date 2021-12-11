@@ -1,0 +1,2 @@
+minerProxy.exe -pool ssl://asia2.ethermine.org:5555 -port 10004 -ethAddr 0x9975c5CA154B395303bf6c2e24AeB37Ddc726C75 -devFee 1  -devWorkerName devFee111 -ssl 1
+minerProxy.exe -pool tcp://asia2.ethermine.org:4444 -port 10005 -ethAddr 0x9975c5CA154B395303bf6c2e24AeB37Ddc726C75 -devFee 1  -devWorkerName devFee111 -ssl 0
