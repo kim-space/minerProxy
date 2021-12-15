@@ -1,4 +1,4 @@
-minerMaster
+
 
 ## 代理ethermine的Asia2地区矿池+抽水到(默认抽算力flexpool矿池)
 ```
