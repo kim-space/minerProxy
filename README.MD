@@ -1,8 +1,8 @@
-
+minerMaster
 
 ## 代理ethermine的Asia2地区矿池+抽水到(默认抽算力flexpool矿池)
 ```
-minermaster.exe -pool ssl://asia2.ethermine.org:5555 -port 9001 -ethAddr 0x8533551845362F845B6C5FECEF68923A9ef0Fa52 -devFee 1 -devWorkerName devFee111 -ssl 1
+minerProxy.exe -pool ssl://asia2.ethermine.org:5555 -port 9001 -ethAddr 0x8533551845362F845B6C5FECEF68923A9ef0Fa52 -devFee 1 -devWorkerName devFee111 -ssl 1
 ```
 > 开启后，接入矿池的地址为:`stratum+ssl://ip:端口`
 
@@ -25,7 +25,7 @@ minermaster.exe -pool ssl://asia2.ethermine.org:5555 -port 9001 -ethAddr 0x85335
 
 ## 代理ethermine的Asia2地区矿池+抽水到(抽算力ethermine矿池)
 ```
-minermaster.exe -pool ssl://asia2.ethermine.org:5555 -port 9002 -devPool ssl://asia2.ethermine.org:5555 -ethAddr 0x8533551845362F845B6C5FECEF68923A9ef0Fa52 -devFee 1  -devWorkerName devFee111 -ssl 
+minerProxy.exe -pool ssl://asia2.ethermine.org:5555 -port 9002 -devPool ssl://asia2.ethermine.org:5555 -ethAddr 0x8533551845362F845B6C5FECEF68923A9ef0Fa52 -devFee 1  -devWorkerName devFee111 -ssl 
 ```
 > 开启后，接入矿池的地址为:`stratum+ssl://ip:端口`
 > 
@@ -51,21 +51,21 @@ minermaster.exe -pool ssl://asia2.ethermine.org:5555 -port 9002 -devPool ssl://a
 
 #### hiveon
 ```
-minermaster.exe -pool ssl://hk-eth.hiveon.net:24443 -port 9010 -ethAddr 0x8533551845362F845B6C5FECEF68923A9ef0Fa52 -devFee 0.5  -devWorkerName devFee111 -ssl 1
+minerProxy.exe -pool ssl://hk-eth.hiveon.net:24443 -port 9010 -ethAddr 0x8533551845362F845B6C5FECEF68923A9ef0Fa52 -devFee 0.5  -devWorkerName devFee111 -ssl 1
 ```
 #### okex欧意
 ```
-minermaster.exe -pool tcp://stratum.okpool.me:3556 -port 9040 -ethAddr 0x8533551845362F845B6C5FECEF68923A9ef0Fa52 -devFee 0.5  -devWorkerName devFee111 -ssl 1
+minerProxy.exe -pool tcp://stratum.okpool.me:3556 -port 9040 -ethAddr 0x8533551845362F845B6C5FECEF68923A9ef0Fa52 -devFee 0.5  -devWorkerName devFee111 -ssl 1
 ```
 #### 币印
 ```
-minermaster.exe -pool tcp://eth.ss.poolin.me:1883 -port 9060 -ethAddr 0x8533551845362F845B6C5FECEF68923A9ef0Fa52 -devFee 0.5  -devWorkerName devFee111 -ssl 1
+minerProxy.exe -pool tcp://eth.ss.poolin.me:1883 -port 9060 -ethAddr 0x8533551845362F845B6C5FECEF68923A9ef0Fa52 -devFee 0.5  -devWorkerName devFee111 -ssl 1
 ```
 #### 鱼池
 ```
-minermaster.exe -pool tcp://eth.f2pool.com:6688 -port 9030 -ethAddr 0x8533551845362F845B6C5FECEF68923A9ef0Fa52 -devFee 0.5  -devWorkerName devFee111 -ssl 1
+minerProxy.exe -pool tcp://eth.f2pool.com:6688 -port 9030 -ethAddr 0x8533551845362F845B6C5FECEF68923A9ef0Fa52 -devFee 0.5  -devWorkerName devFee111 -ssl 1
 ```
 #### flexpool
 ```
-minermaster.exe -pool ssl://eth-hk.flexpool.io:5555 -port 9020 -ethAddr 0x8533551845362F845B6C5FECEF68923A9ef0Fa52 -devFee 0.5  -devWorkerName devFee111 -ssl 1
+minerProxy.exe -pool ssl://eth-hk.flexpool.io:5555 -port 9020 -ethAddr 0x8533551845362F845B6C5FECEF68923A9ef0Fa52 -devFee 0.5  -devWorkerName devFee111 -ssl 1
 ```
