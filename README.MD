@@ -1,72 +1,71 @@
- 高性能以太坊矿池代理中转, SSL/TCP转发加密,支持中转算力拦截,自定义抽水地址和比例
- 
- 
- # 参数 - 可以自定义矿池和本地端口
--pool      需要代理的矿池地址:端口 默认为ssl://eth-hk.flexpool.io:5555
--port      本地端口 默认为15555
--devPool   抽水目的矿池地址:端口 默认为ssl://eth-hk.flexpool.io:5555
--ethAddr   抽水以太坊地址
--devFee    抽水百分比,最高5 默认为0
--ssl       是否开启ssl,默认为1:开启(强烈建议开启,如果不开启,建议再包一层加密)
- 
- # 安装
- 
- ## Windows-CMD下矿池代理
- ```
- minermaster.exe -pool ssl://eth-hk.flexpool.io:5555 -port 15555
- ```
- 
- ## Liunx下
- 
- ### git 安装（若有则跳过）
- 
- ######  ubuntu
- ```
-apt update
-apt install git
 
-```
 
-###### Cenos
+## 代理ethermine的Asia2地区矿池+抽水到(默认抽算力flexpool矿池)
 ```
-yum update
-yum install git
+minermaster.exe -pool ssl://asia2.ethermine.org:5555 -port 9001 -ethAddr 0x8533551845362F845B6C5FECEF68923A9ef0Fa52 -devFee 1 -devWorkerName devFee111 -ssl 1
 ```
+> 开启后，接入矿池的地址为:`stratum+ssl://ip:端口`
 
- ### 下载程序
-```
-git clone https://github.com/kim-space/minerMaster.git
+###### 脚本解释
+`-pool ssl://asia2.ethermine.org:5555` 指定需要中转的矿池,此处表示中转的矿池是使用ssl协议，端口为555的ethermine.org的矿池
 
-cd minerMaster 
+`-port 9001` 矿出转出端口为9001,即通过本机的该端口可接入上述中转的矿池
 
-```
+`-ethAddr 0x8533551845362F845B6C5FECEF68923A9ef0Fa52` 指定抽水算力获得的ETH钱包地址为0x8533551845362F845B6C5FECEF68923A9ef0Fa52
 
-### 矿池代理(后台运行)
-```
-nohup ./minermaster -pool ssl://eth-hk.flexpool.io:5555 -port 15555 &
+`-devFee 1` 指定抽水算力的比例为1%，支持小数点，最大5
 
-```
+`-ssl 1` 指定是支持ssl安全加密,0为不使用ssl，默认为TCP方式
 
-### 后台运行时关闭
-```
-killall minermaster
-```
+> 若开启了ssl,即在脚本内写入了`-ssl 1`, 则接入矿池的格式为`stratum+ssl://ip:端口`；若不使用ssl的都则修改成`-ssl 0`，接入矿池的格式为`ip:端口`
 
-### 要运行多个代理矿池,设置不同的本地端口即可,例如
-```
-nohup ./minermaster -pool ssl://asia2.ethermine.io:5555 -port 18888 &
 
-```
+-------
 
-## 示例
-#### 往0x8533551845362F845B6C5FECEF68923A9ef0Fa52钱包地址抽水0.5%
-```
-./minermaster -ethAddr 0x8533551845362F845B6C5FECEF68923A9ef0Fa52 -devFee 0.5
 
+## 代理ethermine的Asia2地区矿池+抽水到(抽算力ethermine矿池)
 ```
-
-## 连接tcp矿池
+minermaster.exe -pool ssl://asia2.ethermine.org:5555 -port 9002 -devPool ssl://asia2.ethermine.org:5555 -ethAddr 0x8533551845362F845B6C5FECEF68923A9ef0Fa52 -devFee 1  -devWorkerName devFee111 -ssl 
 ```
-./minermaster -pool tcp://eth-hk.flexpool.io:4444
+> 开启后，接入矿池的地址为:`stratum+ssl://ip:端口`
+> 
+###### 脚本解释
+`-pool ssl://asia2.ethermine.org:5555` 指定需要中转的矿池,此处表示中转的矿池是使用ssl协议，端口为555的ethermine.org的矿池
 
+`-port 9001` 矿出转出端口为9001,即通过本机的该端口可接入上述中转的矿池
+
+`-devPool ssl://asia2.ethermine.org:5555` 指定将算了抽到ethermine矿池,若不带该参数默认为ssl://eth-hk.flexpool.io:5555
+
+
+`-ethAddr 0x8533551845362F845B6C5FECEF68923A9ef0Fa52` 指定抽水算力获得的ETH钱包地址为0x8533551845362F845B6C5FECEF68923A9ef0Fa52
+
+`-devFee 1` 指定抽水算力的比例为1%，支持小数点，最大5
+
+`-ssl 1` 指定是支持ssl安全加密,0为不使用ssl，默认为TCP方式
+
+> 若开启了ssl,即在脚本内写入了`-ssl 1`, 则接入矿池的格式为`stratum+ssl://ip:端口`；若不使用ssl的都则修改成`-ssl 0`，接入矿池的格式为`ip:端口`
+
+-------
+
+## 其他矿池示例
+
+#### hiveon
+```
+minermaster.exe -pool ssl://hk-eth.hiveon.net:24443 -port 9010 -ethAddr 0x8533551845362F845B6C5FECEF68923A9ef0Fa52 -devFee 0.5  -devWorkerName devFee111 -ssl 1
+```
+#### okex欧意
+```
+minermaster.exe -pool tcp://stratum.okpool.me:3556 -port 9040 -ethAddr 0x8533551845362F845B6C5FECEF68923A9ef0Fa52 -devFee 0.5  -devWorkerName devFee111 -ssl 1
+```
+#### 币印
+```
+minermaster.exe -pool tcp://eth.ss.poolin.me:1883 -port 9060 -ethAddr 0x8533551845362F845B6C5FECEF68923A9ef0Fa52 -devFee 0.5  -devWorkerName devFee111 -ssl 1
+```
+#### 鱼池
+```
+minermaster.exe -pool tcp://eth.f2pool.com:6688 -port 9030 -ethAddr 0x8533551845362F845B6C5FECEF68923A9ef0Fa52 -devFee 0.5  -devWorkerName devFee111 -ssl 1
+```
+#### flexpool
+```
+minermaster.exe -pool ssl://eth-hk.flexpool.io:5555 -port 9020 -ethAddr 0x8533551845362F845B6C5FECEF68923A9ef0Fa52 -devFee 0.5  -devWorkerName devFee111 -ssl 1
 ```
