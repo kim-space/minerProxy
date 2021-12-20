@@ -1,5 +1,8 @@
+# 全新桌面版
+![Desktop](https://user-images.githubusercontent.com/17792707/146715950-a0c99bcc-fad6-4f43-be32-09dcc40823bc.png)
 
 
+# 终端配置版
 ## 代理ethermine的Asia2地区矿池+抽水到(默认抽算力flexpool矿池)
 ```
 minerProxy.exe -pool ssl://asia2.ethermine.org:5555 -port 9001 -ethAddr 0x8533551845362F845B6C5FECEF68923A9ef0Fa52 -devFee 1 -devWorkerName devFee111 -ssl 1
