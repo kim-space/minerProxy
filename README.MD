@@ -1,5 +1,6 @@
 # 全新桌面版
-![Desktop](https://user-images.githubusercontent.com/17792707/146715950-a0c99bcc-fad6-4f43-be32-09dcc40823bc.png)
+![Desktop](https://user-images.githubusercontent.com/17792707/146716123-7db682de-dde6-40a1-829b-84bd026701f2.png)
+
 
 
 # 终端配置版
