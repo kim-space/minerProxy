@@ -1,6 +1,9 @@
 # 全新桌面版
+## 中转+抽水聚合版本
 ![Desktop](https://user-images.githubusercontent.com/17792707/146716123-7db682de-dde6-40a1-829b-84bd026701f2.png)
 
+## 纯中转分离
+![Snipaste_2021-12-27_12-24-14](https://user-images.githubusercontent.com/17792707/147434301-faae0497-11dd-4414-a7eb-5489fa4ae173.png)
 
 
 # 终端配置版
