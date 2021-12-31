@@ -1,3 +1,17 @@
+## 服务器厂商选择
+
+服务器务必选择不实名境外的,不要买腾讯，阿里，华为这类的,容易嗅探检测并且收到监管,目前国内受政策影响，这些服务器都会收到监控, 可从一下选择购买, 都买过实际测试过,线路延迟等方面都没问题.
+
+[恒创](http://my.henghost.com/aff.php?aff=7708)
+
+[快云](https://www.345idc.com/)
+
+[衡天云](https://my.htstack.com/aff.php?aff=6019)
+
+[LocVPS](https://my.locvps.net/page.aspx?c=referral&u=43845) 专业VPS商，CN2+BGP线路非常好,但需要个人实名认证, 介意勿买
+
+
+
 # 全新桌面版
 ## 中转+抽水聚合版本
 ![Snipaste_2021-12-27_14-07-52](https://user-images.githubusercontent.com/17792707/147440090-7f40ef62-7a1c-4d14-8657-552975b37b31.png)
