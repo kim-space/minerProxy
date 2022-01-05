@@ -4,8 +4,6 @@
 
 [恒创](http://my.henghost.com/aff.php?aff=7708)
 
-[快云](https://www.345idc.com/)
-
 [衡天云](https://my.htstack.com/aff.php?aff=6019)
 
 [LocVPS](https://my.locvps.net/page.aspx?c=referral&u=43845) 专业VPS商，CN2+BGP线路非常好,但需要个人实名认证, 介意勿买
